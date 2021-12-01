@@ -70,6 +70,15 @@ const CharacterList = () => {
                                                 <span aria-hidden="true">&laquo;</span>
                                             </Link>
                                         </li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/1`}>1</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/2`}>2</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/3`}>3</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/4`}>4</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/5`}>5</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/6`}>6</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/7`}>7</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/8`}>8</Link></li>
+                                        <li className="page-item"><Link className="page-link" to={`/characters/list/9`}>9</Link></li>
 
                                         <li className={nextClass}>
                                             <Link className="page-link" to={`/characters/list/${Number(pageNumber) + 1}`}>
