@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 
 const CharacterComponent = () => {
     const characters = useSelector((state: any) => state.allCharacters.characters);
+    const favoriteCharacters = useSelector((state: any) => state.favoriteCharacters);
     const dispatch = useDispatch();
     const renderList = characters.map((character: any, index: number) => {
         const { name, url } = character;
@@ -26,7 +27,13 @@ const CharacterComponent = () => {
                             <Link to={`/characters/${characterId}`} key={index}>
                             <button type="button" className="btn btn-warning">View More</button>
                             </Link>
-                            <button onClick={(e) => {dispatch(addToFavoriteCharacters(characterId))}} type="button" className="btn btn-outline-danger">Add to favorite</button>
+                            {favoriteCharacters.favotite_characters.find(element => element.id[0] == characterId) ? (
+                                <button type="button" className="btn btn-success">SELECTED ✓</button>
+                            
+                            ):(
+<button onClick={(e) => {dispatch(addToFavoriteCharacters({name:name,id: characterId}))}} type="button" className="btn btn-outline-danger">Add to favorite</button>
+
+                            )}
                             </div>
 
                             {/* <div className="card-text">
@@ -46,7 +53,7 @@ const CharacterComponent = () => {
                         </div>
                         
                     </div>
-
+              
                 </div>
 
             

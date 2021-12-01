@@ -24,19 +24,26 @@ export const characterReducer = (state = initialState, {type, payload} ) => {
 
     }
 }
-export const favoriteCharacters = (state = initialState, {type, payload} ) => {
+export const favoriteCharacters_f = (state = initialState, {type, payload} ) => {
 
 
     switch (type) {
     case ActionTypes.ADD_TO_FAVORITE:
-        if(state.favotite_characters.includes(payload[0]) ){
+        
+        if( state.favotite_characters.find(
+            element => 
+                element.id[0] == payload.id[0] 
+                
+            
+            )){
             return {...state, favotite_characters: state.favotite_characters}
         }
         else{
             return{...state, favotite_characters: state.favotite_characters.concat(payload)}
         }
         
-
+    case ActionTypes.REMOVE_FROM_FAVORITE:
+        return{...state, favotite_characters: state.favotite_characters.filter((item) => item.id[0] !== payload.id[0])}
     default:
         return  state;
 

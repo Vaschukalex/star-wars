@@ -20,6 +20,13 @@ export const selectedCharacters = (character?) => {
         };
         };
 
+        export const removeFromFavoriteCharacters = (favotite_characters?) => {
+            return {
+                type: ActionTypes.REMOVE_FROM_FAVORITE,
+                payload: favotite_characters,
+            };
+            };
+
     export const removeSelectedCharacter = (character?) => {
         return {
             type: ActionTypes.REMOVE_SELECTED_CHARACTER,
