@@ -12,7 +12,7 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse navbar_right_block" id="navbarNavDropdown">
                 <ul className="navbar-nav">
-                <li className="nav-item active">
+                    <li className="nav-item active">
                         <Link className="nav_link" to="/characters/list/1">Characters</Link>
                     </li>
                     <li className="nav-item active">

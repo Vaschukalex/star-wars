@@ -75,16 +75,17 @@ textarea {
     box-shadow: 0px 14px 41px -7px rgba(23, 23, 31, 0.25);
 }
 
-.characters_card>.card:hover{
+.characters_card>.card:hover {
     -webkit-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
--moz-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
+    -moz-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
+    box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
 }
+
 .card_home:hover {
     transform: translateY(-8px);
     -webkit-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
--moz-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
+    -moz-box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
+    box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
 }
 
 .card-img,
@@ -268,61 +269,69 @@ box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
     margin-top: 30px !important;
 }
 
-.favorites_wrapper{
+.favorites_wrapper {
     position: absolute;
     width: 100%;
 }
-.list_group_wrapper{
+
+.list_group_wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
 }
-.alert_add{
-   margin-top: 20%;
+
+.alert_add {
+    margin-top: 20%;
 }
-.list-group{
+
+.list-group {
     width: 70%;
-    
+
 }
-.favorite_item{
+
+.favorite_item {
     margin-top: 10px;
 }
-.list-group-item{
+
+.list-group-item {
     height: 150px;
-    border-radius: 0.5em!important;
+    border-radius: 0.5em !important;
     border: none !important;
     z-index: 1;
 }
-.favorite_character_img{
+
+.favorite_character_img {
     width: 170px;
     height: 150px;
     position: relative;
     top: -8px;
     left: -16px;
-    border-radius: 0.5em 0 0 0.5em ;
+    border-radius: 0.5em 0 0 0.5em;
     border-right: 5px solid #ffc107;
 }
 
-.favorite_button_block, .favorite_button_block>a{
+.favorite_button_block,
+.favorite_button_block>a {
     text-decoration: none;
-    margin-top: -10px!important;
+    margin-top: -10px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.favorite_character_title{
+
+.favorite_character_title {
     font-size: 36px;
 }
 
-.character_details_card{
-    width: 80%!important;
+.character_details_card {
+    width: 80% !important;
     height: 450px;
-    margin: auto!important;
-    margin-top: 10%!important;
-    border: 5px solid #ffc100!important;
+    margin: auto !important;
+    margin-top: 10% !important;
+    border: 5px solid #ffc100 !important;
 }
 
-.character_details_img{
+.character_details_img {
     position: relative;
     top: -21px;
     left: -33px;
@@ -331,15 +340,43 @@ box-shadow: 0px 14px 54px -11px rgba(255, 193, 0, 0.6);
     height: 450px;
 }
 
-.character_details_name{
+.character_details_name {
     font-size: 36px;
     font-weight: 700;
 }
-.character_details_button_wrapp{
-    display: flex!important;
+
+.character_details_button_wrapp {
+    display: flex !important;
     flex-direction: column;
+    border-left: 5px solid black;
+    position: relative;
+    top: -21px;
+    right: -15px;
+    text-align: center;
     justify-content: center;
 
+}
+
+.character_detail_planet_popup_img>img {
+    width: 100%;
+    height: 104%;
+    border-radius: 25px 0px 0px 25px;
+    position: relative;
+    top: -6px;
+    left: -6px;
+}
+
+.character_detail_planet_wrapp>button {
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.character_detail_planet_desc {
+    margin-top: 10px !important;
+}
+
+.character_detail_planet_desc>h4>span {
+    font-weight: 400;
 }
 
 /* Media Query */

@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 
 const CharacterList = () => {
-    const[nextClass,setNextClass] = useState("page-item");
-    const[prevClass,setPrevClass] = useState("page-item");
+    const [nextClass, setNextClass] = useState("page-item");
+    const [prevClass, setPrevClass] = useState("page-item");
     const characters = useSelector((state: any) => state.allCharacters.characters);
     const dispatch = useDispatch();
     var { pageNumber } = useParams();
@@ -23,20 +23,20 @@ const CharacterList = () => {
     }
 
     useEffect(() => {
-        if(pageNumber && pageNumber !== "" && Number(pageNumber) < 10 && Number(pageNumber) > 0 ){
+        if (pageNumber && pageNumber !== "" && Number(pageNumber) < 10 && Number(pageNumber) > 0) {
             fetchCharacters();
-            if ( Number(pageNumber) > 8){
+            if (Number(pageNumber) > 8) {
                 setNextClass('page-item disabled');
             }
-            else if(Number(pageNumber)<=1){
+            else if (Number(pageNumber) <= 1) {
                 setPrevClass('page-item disabled');
             }
-            else{
+            else {
                 setNextClass('page-item');
                 setPrevClass('page-item');
             }
         }
-        return () =>{
+        return () => {
             dispatch(removeSelectedCharacters())
         }
     }, [pageNumber])
@@ -65,17 +65,17 @@ const CharacterList = () => {
                                 <nav aria-label="Page navigation">
                                     <ul className="pagination">
                                         <li className={prevClass}>
-                                                
-                                                <Link className="page-link" to={`/characters/list/${Number(pageNumber) - 1 }`}>
+
+                                            <Link className="page-link" to={`/characters/list/${Number(pageNumber) - 1}`}>
                                                 <span aria-hidden="true">&laquo;</span>
-                                                </Link>
+                                            </Link>
                                         </li>
 
-                                        <li className ={nextClass}>
-                                            <Link className="page-link" to={`/characters/list/${Number(pageNumber) + 1 }`}>
-                                            <span aria-hidden="true">&raquo;</span>
-                                                </Link>
-                                               
+                                        <li className={nextClass}>
+                                            <Link className="page-link" to={`/characters/list/${Number(pageNumber) + 1}`}>
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </Link>
+
                                         </li>
                                     </ul>
                                 </nav>

@@ -6,9 +6,9 @@ import popUpImg from '../../img/pop-up-1.jpeg';
 const Contact = () => {
     const maxTextLineLength: number = 250;
     const [code, setCode] = useState('');
-    const inputCode:any = useRef();
+    const inputCode: any = useRef();
     const [phone, setPhone] = useState('');
-    const inputPhone:any = useRef();
+    const inputPhone: any = useRef();
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
     const [name, setName] = useState('');
@@ -17,7 +17,7 @@ const Contact = () => {
     const [msg, setMsg] = useState('');
     const [checked, setChecked] = useState(false);
 
-    const handleSubmit = (ev:any) => {
+    const handleSubmit = (ev: any) => {
 
         ev.preventDefault();
         setOpen(!open);
@@ -58,7 +58,7 @@ const Contact = () => {
     useEffect(() => {
         phoneMask();
         codeMask();
-    }, [phone,code]);
+    }, [phone, code]);
 
 
 
