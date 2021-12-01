@@ -6,7 +6,6 @@ import Popup from 'reactjs-popup';
 const PlanetButtonLazy = (props: any) => {
     const planets = useSelector((state: any) => state.planets);
     const { name, rotation_period, orbital_period, diameter, climate, gravity, terrain, population } = planets.planets;
-    console.log(name);
     const dispatch = useDispatch();
     const fetchCharacters = async () => {
         const response: any = await axios
@@ -14,7 +13,6 @@ const PlanetButtonLazy = (props: any) => {
             .catch((err) => {
                 console.log("Error:", err);
             });
-        console.log(response.data);
         dispatch(setPlanets(response.data));
     }
     useEffect(() => {

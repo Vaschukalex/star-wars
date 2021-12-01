@@ -55,11 +55,11 @@ const CharacterDetails = () => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <PlanetButtonLazy planetUrl={homeworld} />
                   </Suspense>
-                  {favoriteCharacters.favotite_characters.find(element => element.id[0] == characterId) ? (
+                  {favoriteCharacters.favotite_characters.find(element => element.id == characterId) ? (
                     <button type="button" className="btn btn-success">SELECTED ✓</button>
 
                   ) : (
-                    <button onClick={(e) => { dispatch(addToFavoriteCharacters({ name: name, id: characterId })) }} type="button" className="btn btn-outline-danger">Add to Favorite</button>
+                    <button onClick={(e) => { dispatch(addToFavoriteCharacters({ name: name, id: characterId })); console.log('as'); console.log(characterId) }} type="button" className="btn btn-outline-danger">Add to Favorite</button>
                   )}
 
 

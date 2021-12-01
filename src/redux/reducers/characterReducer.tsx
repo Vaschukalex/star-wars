@@ -49,7 +49,7 @@ export const favoriteCharacters_f = (state = initialState, { type, payload }) =>
 
             if (state.favotite_characters.find(
                 element =>
-                    element.id[0] == payload.id[0]
+                    element.id == payload.id
 
 
             )) {
@@ -60,7 +60,7 @@ export const favoriteCharacters_f = (state = initialState, { type, payload }) =>
             }
 
         case ActionTypes.REMOVE_FROM_FAVORITE:
-            return { ...state, favotite_characters: state.favotite_characters.filter((item) => item.id[0] !== payload.id[0]) }
+            return { ...state, favotite_characters: state.favotite_characters.filter((item) => item.id !== payload.id) }
         default:
             return state;
 
