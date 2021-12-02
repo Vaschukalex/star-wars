@@ -282,8 +282,14 @@ textarea {
 
 .alert_add {
     margin-top: 20%;
-}
+    display: flex!important;
+    align-items:center;
+    justify-content: center;
 
+}
+.alert_add>p{
+    font-size: 26px;
+}
 .list-group {
     width: 70%;
 

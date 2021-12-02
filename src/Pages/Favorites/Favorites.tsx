@@ -46,7 +46,7 @@ const Favorites = () => {
                 <div className="list_group_wrapper" >
                     <ul className="list-group">
                         {Object.keys(favorite_characters.favotite_characters).length === 0 ? (
-                            <li className="list-group-item alert_add" >The favorite list is empty. Add some of your favorite characters</li>
+                            <li className="list-group-item alert_add" ><p>The favorite list is empty. Add some of your favorite characters</p></li>
 
                         ) : (
 
