@@ -27,7 +27,7 @@ const CharacterComponent = () => {
                             <Link to={`/characters/${characterId}`} key={index}>
                                 <button type="button" className="btn btn-warning">View More</button>
                             </Link>
-                            {favoriteCharacters.favotite_characters.find(element => element.id[0] == characterId) ? (
+                            {favoriteCharacters.favotite_characters.find(element => element.id == characterId) ? (
                                 <button type="button" className="btn btn-success">SELECTED ✓</button>
 
                             ) : (

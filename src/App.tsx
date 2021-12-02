@@ -16,12 +16,12 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="*" element={<Page404 />} />
           <Route path="/" element={<Home />} />
           <Route path="/characters/list/:pageNumber" element={<CharacterList />} />
           <Route path="/characters/:characterId" element={<CharacterDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route element={<Page404 />} />
         </Routes>
 
       </Router>

@@ -378,7 +378,21 @@ textarea {
 .character_detail_planet_desc>h4>span {
     font-weight: 400;
 }
-
+.page404_wrapper{
+background-color:black;
+height: 100vh;
+}
+.page404_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    
+}
+.page404_wrapper>h1{
+    font-size: 36px;
+    color:#FFF;
+}
 /* Media Query */
 
 @media screen and (max-width: 1200px) {

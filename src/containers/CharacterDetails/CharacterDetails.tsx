@@ -25,7 +25,12 @@ const CharacterDetails = () => {
       dispatch(removeSelectedCharacter())
     }
   }, [characterId]);
-  const image = require(`../../img/characters/${characterId}.jpg`);
+  var image:any;
+  try {
+    image = require(`../../img/characters/${characterId}.jpg`);
+} catch (error) {
+    
+}
   return (
     <div className="character_detail_wrapper">
       <div className="card character_details_card">
