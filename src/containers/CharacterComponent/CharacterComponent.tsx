@@ -11,7 +11,7 @@ const CharacterComponent = () => {
     const dispatch = useDispatch();
     const renderList = characters.map((character: any, index: number) => {
         const { name, url } = character;
-        var characterId = url.match(/\d+/);
+        var characterId:string = url.match(/\d+/);
         const image = require(`../../img/characters/${characterId}.jpg`);
         return (
 
